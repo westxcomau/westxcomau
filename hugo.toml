@@ -1,5 +1,5 @@
-baseURL = "https://saasify-demo.chaoming.li/"
-title = "Saasify"
+baseURL = "https://westx.com.au/"
+title = "WestX Property Services"
 defaultContentLanguage = "en"
 
 # Theme Config
@@ -23,47 +23,38 @@ enableGitInfo = true
 
 [params]
   description = "WestX Property Services - Website"
-  author = "Hasan Ali Khattak"
+  author = "WestX"
   logo = "/images/logo.svg"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
-  # googleAnalytics = "G-XXXXXXXXXX"
+  googleAnalytics = "G-D0CMHVBV2S"
   
   # Global CTA Configuration
   [params.cta]
     enable = true
-    title = "Ready to Build Your SaaS Website?"
-    description = "Join companies already using our theme to create beautiful, high-performance websites."
+    title = "Ready to Transform Your Property?"
+    description = "Join hundreds of satisfied clients who have transformed their properties with WestX."
     gradient_from = "#2563eb"  # Indigo-600
     gradient_to = "#7c3aed"    # Purple-600
     gradient_angle = 30
     [params.cta.primary_button]
-      text = "Get Started Free"
-      url = "/get-started"
+      text = "Get in Touch"
+      url = "/contact"
     [params.cta.secondary_button]
-      text = "Book Demo"
-      url = "/demo"
+      text = "View Our Work"
+      url = "/portfolio"
   
   # Social Media Links
   [params.social]
-    linkedin = "https://linkedin.com/in/chaomingli"
-    twitter = "https://twitter.com/lichaoming"
-    bluesky = "https://bsky.app/profile/bsky.app"
-    youtube = "https://youtube.com/@chaomingli"
+    linkedin = "https://linkedin.com/company/westx-property-services"
     facebook = "https://facebook.com/westx.com.au"
     instagram = "https://instagram.com/westx.com.au"
-    github = "https://github.com/westxcomau"
-    telegram = "https://t.me/yourchannel"
-    discord = "https://discord.gg/yourinvite"
-    slack = "https://yourteam.slack.com"
-    medium = "https://medium.com/@yourhandle"
-    dribbble = "https://dribbble.com/yourprofile"
-    behance = "https://behance.net/yourprofile"
-  
+    tiktok = "https://tiktok.com/@westx.com.au"
+    
   # Footer Configuration
   [params.footer]
-    column_1_title = "Features"
-    column_2_title = "COMPANY"
-    column_3_title = "LEGAL"
+    column_1_title = "Services"
+    column_2_title = "Company"
+    column_3_title = "Legal"
   
   [params.header]
     # Header background and border styles (optional)
@@ -94,20 +85,15 @@ enableGitInfo = true
     # Button configuration
     [params.header.buttons]
       # Sign In button
-      [params.header.buttons.signIn]
-        text = "Sign in"
-        url = "/signin"
-      
-      # Get Started button
       [params.header.buttons.getStarted]
-        text = "Get Started"
-        url = "/get-started"
+        text = "Get in Touch"
+        url = "/contact"
 
   # Blog configuration
   [params.blog]
     enable = true
-    title = "Latest Articles"
-    subtitle = "Learn more about web development and best practices"
+    title = "Latest News"
+    subtitle = "Stay updated with latest news and updates from WestX"
     
     # Blog CTA configuration
     [params.blog.cta]
@@ -118,7 +104,7 @@ enableGitInfo = true
       # Recent articles section
       [params.blog.sidebar.recent]
         enable = true
-        title = "Recent Articles"
+        title = "Recent News"
         count = 5
       
       # Categories section
@@ -137,7 +123,7 @@ enableGitInfo = true
         enable = true
         title = "Subscribe to Newsletter"
         description = "Get the latest posts delivered right to your inbox"
-        action = "https://formspree.io/f/your-form-id"
+        action = "https://formspree.io/f/mrervlej"
         emailName = "email"
         buttonText = "Subscribe"
         placeholder = "Enter your email"
@@ -179,36 +165,36 @@ enableGitInfo = true
 #   [languages.en]
 #     languageCode = "en-us"
 #     languageName = "English"
-#     title = "Saasify"
+#     title = "WestX Property Services"
 #     weight = 1
 #     contentDir = "content"
-#
-#   [languages.zh-cn]
-#     languageCode = "zh-cn"
-#     languageName = "简体中文"
-#     title = "Saasify"
-#     weight = 2
-#     contentDir = "content/zh-cn"
 
 # Navigation Menu
 [menu]
   [[menu.main]]
-    name = "Features"
+    name = "Services"
     weight = 1
     [menu.main.params]
       has_submenu = true
       submenu = [
-        { name = "Performance", url = "/features/performance/" },
-        { name = "Design System", url = "/features/design-system/" },
-        { name = "Developer Experience", url = "/features/developer-experience/" }
+        { name = "Lawn Services", url = "/services/lawn-services/" },
+        { name = "External Cleaning", url = "/services/external-cleaning/" },
+        { name = "Paint & Maintainance", url = "/services/paint-maintenance/" },
+        { name = "Property Maintenance", url = "/services/property-maintenance/" }
       ]
   [[menu.main]]
-    name = "Pricing"
-    url = "/pricing"
+    name = "About Us"
+    url = "/about"
     weight = 2
+    [menu.main.params]
+      has_submenu = true
+      submenu = [
+        { name = "About Us", url = "/about/" },
+        { name = "Why Us", url = "/why-us/" }
+      ]
   [[menu.main]]
-    name = "Blog"
-    url = "/blog"
+    name = "News"
+    url = "/news"
     weight = 3
   [[menu.main]]
     name = "Company"
@@ -222,22 +208,26 @@ enableGitInfo = true
 
   # Footer Column 1 Menu
   [[menu.footer_column_1]]
-    name = "Performance"
-    url = "/features/performance/"
+    name = "Lawn Services"
+    url = "/services/lawn-services/"
     weight = 1
   [[menu.footer_column_1]]
-    name = "Design System"
-    url = "/features/design-system/"
+    name = "External Cleaning"
+    url = "/services/external-cleaning/"
     weight = 2
   [[menu.footer_column_1]]
-    name = "Developer Experience"
-    url = "/features/developer-experience/"
+    name = "Paint & Maintainance"
+    url = "/services/paint-maintenance/"
     weight = 3
+  [[menu.footer_column_1]]
+    name = "Property Maintenance"
+    url = "/services/property-maintenance/"
+    weight = 4
 
   # Footer Column 2 Menu
   [[menu.footer_column_2]]
-    name = "Blog"
-    url = "/blog"
+    name = "News"
+    url = "/news"
     weight = 1
   [[menu.footer_column_2]]
     name = "About Us"
@@ -257,3 +247,11 @@ enableGitInfo = true
     name = "Privacy Policy"
     url = "/privacy"
     weight = 2
+  [[menu.footer_column_3]]
+    name = "Terms of Service"
+    url = "/terms"
+    weight = 3
+  [[menu.footer_column_3]]
+    name = "Disclaimer"
+    url = "/disclaimer"
+    weight = 4
