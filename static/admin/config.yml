@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: westxcomau/westxcomau   # e.g. johndoe/my-website
+  repo: westxcomau/westxcomau.github.io   # e.g. johndoe/my-website
   branch: main
 
 media_folder: static/images
@@ -9,12 +9,40 @@ public_folder: /images
 collections:
   - name: "blog"
     label: "Blog Posts"
-    folder: "content/posts"
+    folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title",       name: "title",   widget: "string" }
       - { label: "Date",        name: "date",     widget: "datetime" }
-      - { label: "Draft",       name: "draft",    widget: "boolean", default: false }
-      - { label: "Cover Image", name: "image",    widget: "image",   required: false }
+      - { label: "Author",       name: "author",   widget: "string" }
+      - { label: "Description",       name: "description",   widget: "string" }
+      - { label: "Cover Image", name: "featured_image",    widget: "image",   required: false }
       - { label: "Body",        name: "body",     widget: "markdown" }
+
+# --- ADD THIS ---
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title",       name: "title",       widget: "string" }
+      - { label: "Description", name: "description", widget: "string",   required: false }
+      - { label: "Body",        name: "body",        widget: "markdown" }
+
+# --- ADD THIS ---
+  - name: "jobs"
+    label: "Jobs"
+    folder: "content/jobs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title",       name: "title",       widget: "string" }
+      - { label: "Date",        name: "date",        widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string",   required: false }
+      - { label: "Location",    name: "location",    widget: "string" }
+      - { label: "Type",        name: "type",        widget: "string" }
+      - { label: "Salary",      name: "salary",      widget: "string" }
+      - { label: "Layout",      name: "layout",      widget: "string", required: false }
+      - { label: "Body",        name: "body",        widget: "markdown" }
